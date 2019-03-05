@@ -1,0 +1,119 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css?family=Nunito|Roboto+Condensed');
+
+@import '../sass/fonts/nafeesnastaleeqv1.02.ttf';
+@import '../sass/fonts/jameelnoori.ttf';
+
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// .body {
+  // font-family: $font-family-Roboto;
+// }
+
+@font-face {
+  font-family: 'Nafees Nastaleeq';
+  src: url('../sass/fonts/nafeesnastaleeqv1.02.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jameel Noori';
+  src: url('../sass/fonts/jameelnoori.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(160, 158, 158);
+  color:white;
+}
+.active a {
+  @extend .text-warning;
+  font-size: bold;
+}
+.urdu {
+  // font-family: "Nafees Nastaleeq";
+  font-family: 'Jameel Noori';
+  font-kerning: normal;
+  // direction: rtl !important;
+  // margin:0 0 10px; unicode-bidi:bidi-override; direction:rtl;
+}
+
+.navbar-laravel {
+  // background-color: rgb(175, 73, 73);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+//** Blog Specific changes to bootstrap **//
+.card,.card-img-top,.badge, .page-link, input,li {
+  @extend .rounded-0;
+}
+.card {
+  @extend .bg-secondary;
+  color:white;
+  @extend .border-0;
+}
+.card-header {
+  @extend .rounded-0;
+  @extend .bg-primary;
+  @extend .text-white;
+  font-weight: 600;
+}
+
+table {
+  @extend .bg-secondary;
+}
+
+.btn {
+  @extend .rounded-0;
+  color:white;
+}
+
+// .fas {
+//   color : #888888;
+// }
+
+.analytics {
+  @extend .bg-secondary;
+  @extend .shadow;
+  // border: 1px solid;
+  padding:10px;
+  margin-bottom:10px;
+}
+
+.analytics-icon{
+  width:50px;
+  height:50px;
+  color: white;
+}
+
+.analytics-text{
+  float:left;
+  padding-top:10px;
+  display: inline-block;
+  font-size:1.5rem;
+  line-height: 1.6rem;
+  color:white;
+}
+
+// Hide image upload from disk in summernote
+.note-group-select-from-files {
+  display: none;
+}
+
+.list-group-item{
+  @extend .bg-secondary;
+}
+.list-group-item a {
+  color:white;
+}
+.list-group-item .fas {
+  color:white;
+}

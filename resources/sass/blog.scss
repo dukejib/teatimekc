@@ -1,0 +1,324 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '../sass/fonts/nafeesnastaleeqv1.02.ttf';
+@import '../sass/fonts/asunaskh.ttf';
+@import '../sass/fonts/jameelnoori.ttf';
+
+@font-face {
+  font-family: 'Nafees Nastaleeq';
+  src: url('../sass/fonts/nafeesnastaleeqv1.02.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Asu Naskh';
+  src: url('../sass/fonts/asunaskh.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Jameel Noori';
+  src: url('../sass/fonts/jameelnoori.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+//** Create Colors for System **//
+:root {
+  --light-color : #888888;
+  --light-gray : #c0c0c0ee;
+}
+
+.urdu {
+  // font-family: "Nafees Nastaleeq";
+  font-family: 'Jameel Noori';
+  // font-kerning: normal;
+  letter-spacing: 1px;
+  line-height: 1.8; //1.6 is recommended
+  // direction: rtl !important;
+  // margin:0 0 10px; unicode-bidi:bidi-override; direction:rtl;
+}
+
+.urdu-heading{
+  font-family: 'Jameel Noori';
+  line-height: 1.8; //1.6 is recommended
+  font-size:2.5rem; // bootstrap 4 h1 2.5rem
+}
+
+//Basic Body Setup
+body {
+  padding-top: 64px;
+  background-color: #e3e3e3;
+  color: var(--light-color);
+}
+// Main Navigation Bar
+.navbar-frontend {
+  background-color:#4d5d6d;
+}
+// Remove decotration from anchor tag
+a {
+  text-decoration: none;
+  color: var(--light-color);
+}
+
+a:hover {
+  text-decoration: none;
+  color:$primary;
+}
+// Set Fontawesome Color
+.fas {
+  color: var(--light-color);
+}
+// Font Awesome for Pseudo elements
+.icon::before {
+  // display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+// Main Page Article Container
+// .post-container{
+//   text-align: center;
+//   padding-top:30px;
+//   padding-bottom:30px;
+//   margin-top:30px;
+//   border:1px solid;
+// }
+// Actual Post
+.post {
+  margin:5px 5px;
+  margin-bottom:30px;
+  display: inline-block;
+  // position: relative;
+}
+// Add ThumbTack
+// .first-post:before {
+//   content : '\f08d';
+//   background: $danger;
+//   font-family: "Font Awesome 5 Free";
+//   color:white;
+//   font-weight: 900;
+//   @extend .shadow;
+//   // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//   padding:10px;
+//   position: relative;
+//   top:2%;
+//   left:-35%;
+// }
+//Image in post
+.post-img {
+  @extend .rounded-0;
+  @extend .img-fluid;
+  // display: block;
+  // max-width: 100%;
+  margin:auto;
+  width:100%;
+  height: auto;
+  @extend .shadow;
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+//Add a light color on hover
+.post a img:hover {
+  @extend .shadow;
+  // box-shadow: 0 4px 8px 0 $info, 0 6px 20px 0 rgba(30, 40, 30, 0.19);
+}
+// Do somethign with post title
+.post-title {
+  display: block;
+  margin-top:20px;
+  text-align: left;
+  text-overflow: ellipsis;
+  font-size: 135%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.post-info {
+  display: block;
+  text-align: center;
+  padding:20px;
+}
+.post_date, .post_tags {
+  margin-left:10px;
+  margin-right: 10px;
+  color: var(--light-color);
+  font-size:.8rem;
+  a {
+    margin-left:2px;
+    margin-right:2px;
+  }
+}
+///// Single Post Starts Here ///////
+// Single Post Image
+.single-post-img {
+  @extend .rounded-0;
+  @extend .img-fluid;
+  margin:auto;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.single-post{
+  // margin:20px 5px;
+  // margin-bottom:30px;
+  margin:5px;
+  width:100%;
+  height: auto;
+}
+.single-post p {
+  color:var(--light-color);
+  font-size: 1rem;
+}
+.single-post p a {
+  font-weight: 600;
+}
+.single-post img{
+  @extend .rounded-0;
+  @extend .img-fluid;
+  display: block;
+  margin:auto;
+  max-width: 100%;
+  height: auto;
+}
+
+// .emoji {
+//   display: inline-block !important;
+//   margin:0px;
+// }
+//Post Tags -- Use Tags for Actual, Then Tag Items 
+.tags {
+  text-align: center;
+  border-top : 1px outset var(--light-color);
+  border-bottom : 1px inset var(--light-color);
+  margin-top:2px;
+  margin-bottom:2px;
+  padding:20px 3px;
+  // background: #e3e3e3;
+}
+
+.tag-item {
+  @extend .rounded-0;
+  padding:5px 10px;
+  margin:2px;
+  background: $success;
+  color:white;
+  font-size:.8rem;
+}
+.tag-list-item{
+  padding:5px;
+  margin:2px;
+  background:$success;
+  color:white;
+  font-size: 1.0rem;
+  // @extend .rounded-4;
+}
+.tag-item:hover ,.tag-list-item:hover {
+  color:white;
+  background: $primary;
+}
+
+
+//Pagination of 
+// .pagination {
+//   font-weight: bold;
+// }
+
+// Categories Listing in Main Page
+.category-list {
+  // border-top: 4px outset var(--light-color);
+  // border-bottom: 4px inset var(--light-color);
+  // margin:2px 0px;
+  @extend .shadow;
+  background-color: white;
+  // display: inline;
+  font-size: 2.5rem;
+  width:100%;
+  color:var(--light-color);
+}
+// Author Line 
+.author{
+  border-top: 1px outset var(--light-color);
+  border-bottom: 1px inset var(--light-color);
+  margin-top:5px;
+  margin-bottom:5px;
+  background: #e3e3e3;
+  padding:10px;
+  font-size: .8rem;
+  color:var(--light-color);
+}
+
+.header {
+  font-size: 1.75rem;
+  padding-left:10px;
+  color:white;
+}
+// FollowMe Twitter Tag For Author
+.follow-me {
+  background: $primary;
+  color:white;
+  padding:2px 5px;
+  margin-left:5px;
+}
+
+.follow-me:hover{
+  background: $success;
+  color:white;
+}
+
+////////////// MEDIA QUERIES /////////////////////////
+@media (min-width: 992px) {
+  body {
+    padding-top: 66px;
+   
+  }
+  
+}
+////////////////MEDIA QUERIES //////////////////////////
+
+
+//** Blog Specific changes to bootstrap **//
+.card,.card-img-top, .card-header, .page-link , input ,img{
+  @extend .rounded-0;
+}
+
+.badge {
+  @extend .rounded-0;
+  padding-left:10px;
+  padding-right:10px;
+}
+.navbar-brand {
+  font-size:150%;
+  // font-family: 'Nunito+Sans';
+}
+.nav-link{
+  font-size:110%;
+}
+.btn {
+  color: white;
+  @extend .rounded-0;
+}
+
+small {
+  color: #888888;
+  font-size:65%;
+}
+
+.muted {
+  color: #888888;
+  font-size:85%;
+}
+// Profile Windows
+.profile {
+  @extend .muted;
+}
+
+
+
+
