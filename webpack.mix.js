@@ -15,7 +15,7 @@ mix.js('resources/js/bootstrap.js', 'public/js')
   	mix.sass('resources/sass/app.scss', 'public/css')
    	.sass('resources/sass/blog.scss','public/css')
    	.browserSync({
-		proxy:'localhost:8000',
+		proxy:'localhost',
 		files:[
 			'public/**/*.html','public/css/**/*.css','public/js/**/*.js',
 			'resources/views/**/*.blade.php'
